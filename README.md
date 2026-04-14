@@ -200,5 +200,5 @@ Workflow Location:
 .github/workflows/docker.yml
 
 Required GitHub Secrets:
- - # DOCKER_USERNAME
- - # DOCKER_PASSWORD
+ - `DOCKER_USERNAME`
+ - `DOCKER_PASSWORD`
