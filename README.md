@@ -78,6 +78,12 @@ The application is containerized and available publicly on DockerHub:
 
 `https://hub.docker.com/r/mdsn6719/simple-time-service`
 
+Pull to your Local
+
+```bash
+docker pull mdsn6719/simple-time-service:latest
+```
+
 Build Locally
 
 ```bash
