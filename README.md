@@ -75,15 +75,25 @@ Output format: json
 The application is containerized and available publicly on DockerHub:
 
 https://hub.docker.com/r/<your-dockerhub-username>/simple-time-service
+
 Build Locally
+
+```bash
 cd app
 docker build -t simple-time-service .
+```
+
 Run Locally
+
+```bash
 docker run -p 8080:8080 simple-time-service
+```
 
 Test:
 
+```bash
 http://localhost:8080
+```
 
 ---
 
@@ -91,20 +101,28 @@ http://localhost:8080
 
 Clone the repository:
 
+```bash
 git clone <your-repo-url>
 cd terraform
+```
 
 Initialize Terraform:
 
+```bash
 terraform init
+```
 
 Review the plan:
 
+```bash
 terraform plan
+```
 
 Deploy infrastructure:
 
+```bash
 terraform apply
+```
 
 Type yes when prompted.
 
@@ -113,14 +131,17 @@ Type yes when prompted.
 ## 🌐 Access the Application
 
 After deployment:
+
 ```bash
 terraform output alb_url
 ```
 Open in browser:
+
 ```bash
 http://<ALB_DNS_NAME>
 ```
 Expected response:
+
 ```bash
 {
   "timestamp": "2026-04-14T10:00:00Z",
@@ -132,6 +153,7 @@ Expected response:
 ## 🧹 Cleanup (IMPORTANT)
 
 To avoid unnecessary AWS charges:
+
 ```bash
 terraform destroy
 ```
