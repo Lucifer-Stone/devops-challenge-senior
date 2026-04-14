@@ -76,7 +76,7 @@ Output format: json
 
 The application is containerized and available publicly on DockerHub:
 
-`https://hub.docker.com/r/<your-dockerhub-username>/simple-time-service`
+`https://hub.docker.com/r/mdsn6719/simple-time-service`
 
 Build Locally
 
@@ -104,7 +104,7 @@ http://localhost:8080
 Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Lucifer-Stone/devops-challenge-senior.git
 cd terraform
 ```
 
