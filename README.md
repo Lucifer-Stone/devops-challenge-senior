@@ -59,9 +59,11 @@ Configure AWS credentials:
 
 ```bash
 aws configure
+```
 
 Provide:
 
+```bash
 Access Key
 Secret Key
 Region (e.g., ap-south-1)
@@ -74,7 +76,7 @@ Output format: json
 
 The application is containerized and available publicly on DockerHub:
 
-https://hub.docker.com/r/<your-dockerhub-username>/simple-time-service
+`https://hub.docker.com/r/<your-dockerhub-username>/simple-time-service`
 
 Build Locally
 
@@ -162,16 +164,18 @@ terraform destroy
 
 ## 🔒 Security Considerations
 
-No credentials are stored in the repository
-ECS tasks run in private subnets
-Security groups restrict access:
-ALB → public HTTP access
-ECS → only accessible from ALB
-Container runs as a non-root user
+ - No credentials are stored in the repository
+ - ECS tasks run in private subnets
+ - Security groups restrict access:
+    - ALB → public HTTP access
+    - ECS → only accessible from ALB
+ - Container runs as a non-root user
 
 ---
 
 ## 📁 Project Structure
+
+```bash
 .
 ├── app
 │   ├── main.go
@@ -182,17 +186,19 @@ Container runs as a non-root user
     ├── variables.tf
     ├── outputs.tf
     └── terraform.tfvars
+```
 
 --- 
 
 ## ⚡ CI/CD Pipeline (Extra Credit)
 
 A GitHub Actions workflow is included to automate:
+ - Docker image build
+ - Push to DockerHub
 
-Docker image build
-Push to DockerHub
 Workflow Location:
 .github/workflows/docker.yml
+
 Required GitHub Secrets:
-DOCKER_USERNAME
-DOCKER_PASSWORD
+ - # DOCKER_USERNAME
+ - # DOCKER_PASSWORD
