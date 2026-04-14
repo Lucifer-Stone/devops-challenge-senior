@@ -1,0 +1,1 @@
+app_image = "mdsn6719/simple-time-service:latest"
