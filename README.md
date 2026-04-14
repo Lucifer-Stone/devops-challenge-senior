@@ -66,7 +66,11 @@ Access Key
 Secret Key
 Region (e.g., ap-south-1)
 Output format: json
-🐳 Docker Image
+```
+
+---
+
+## 🐳 Docker Image
 
 The application is containerized and available publicly on DockerHub:
 
@@ -80,7 +84,10 @@ docker run -p 8080:8080 simple-time-service
 Test:
 
 http://localhost:8080
-🚀 Deployment Instructions
+
+---
+
+## 🚀 Deployment Instructions
 
 Clone the repository:
 
@@ -101,35 +108,48 @@ terraform apply
 
 Type yes when prompted.
 
-🌐 Access the Application
+---
+
+## 🌐 Access the Application
 
 After deployment:
-
+```bash
 terraform output alb_url
-
+```
 Open in browser:
-
+```bash
 http://<ALB_DNS_NAME>
-
+```
 Expected response:
-
+```bash
 {
   "timestamp": "2026-04-14T10:00:00Z",
   "ip": "x.x.x.x"
 }
-🧹 Cleanup (IMPORTANT)
+```
+---
+
+## 🧹 Cleanup (IMPORTANT)
 
 To avoid unnecessary AWS charges:
-
+```bash
 terraform destroy
-🔒 Security Considerations
+```
+
+---
+
+## 🔒 Security Considerations
+
 No credentials are stored in the repository
 ECS tasks run in private subnets
 Security groups restrict access:
 ALB → public HTTP access
 ECS → only accessible from ALB
 Container runs as a non-root user
-📁 Project Structure
+
+---
+
+## 📁 Project Structure
 .
 ├── app
 │   ├── main.go
@@ -140,7 +160,10 @@ Container runs as a non-root user
     ├── variables.tf
     ├── outputs.tf
     └── terraform.tfvars
-⚡ CI/CD Pipeline (Extra Credit)
+
+--- 
+
+## ⚡ CI/CD Pipeline (Extra Credit)
 
 A GitHub Actions workflow is included to automate:
 
